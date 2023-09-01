@@ -32,7 +32,7 @@
   <button id="btnMsg" onclick="sendMsg()">ส่งข้อความ</button>
   <button id="btnShare" onclick="shareMsg()">แชร์ให้เพื่อน</button>
   <button onclick="openWindow()">ไปยังเว็บไซต์</button>
-  <button id="btnScanCode" onclick="scanCode()">สแกน QR CODE</button>
+  <button id="btnScanCodeV2" onclick="scanCodeV2()">สแกน QR CODE</button>
   <button id="btnLogOut" onclick="logOut()">ออกจากระบบ</button>
   <button id="btnClose" onclick="closed()">ปิดหน้าต่าง</button>
 
@@ -57,7 +57,13 @@
       liff.closeWindow()
     }
 
-    async function scanCode() {
+    async function scanCodeV2() {
+      try {
+        const result = await liff.scanCodeV2();
+        document.querySelector('#result').innerHTML = result.value;
+      } catch(error) {
+        console.log('scanCodeV2', error);
+      }
     }
 
     function openWindow() {
@@ -68,8 +74,6 @@
     }
 
     async function getFriendship() {
-      const friend = await liff.getFriendship()
-      document.getElementById("friend").append(friend.friendFlag)
     }
 
     async function sendMsg() {
@@ -112,18 +116,22 @@
         document.getElementById("btnLogOut").style.display = "none"
       } else {
         document.getElementById("btnMsg").style.display = "none"
-        document.getElementById("btnScanCode").style.display = "none"
+        document.getElementById("btnScanCodeV2").style.display = "none"
         document.getElementById("btnClose").style.display = "none"
       }
     }
 
     async function main() {
-      await liff.init({ liffId: "2000600918-lyZRD6AK" })
-      getEnvironment()
-      getUserProfile()
-      getContext()
-      getFriendship()
-      // createUniversalLink()
+      await liff.init({ liffId: "2000600918-lyZRD6AK" });
+      if (!liff.isLoggedIn()) {
+        liff.login();
+      } else {
+        getEnvironment();
+        getUserProfile();
+        getContext();
+        // getFriendship()
+        // createUniversalLink()
+      }
     }
     main()
   </script>
