@@ -553,25 +553,18 @@ a>code {
 }
 
 .left {
-  position: relative;
-  z-index: 1;
-  width: 60px;
-  float: left
-}
-
-.center {
   position: absolute;
-  justify-content: center;
   width: 100%;
   min-width: 0px;
   font-size: 17px;
-  font-weight: bold
+  font-weight: bold;
+  float: left
 }
 
 .right {
   position: relative;
   z-index: 1;
-  width: 60px;
+  width: 120px;
   float: right
 }
 
@@ -630,4 +623,26 @@ p {
 
 #content {
   margin: 30px 0;
+}
+
+.welcome {
+  background-color: #000;
+  width: 100%;
+  height: 60px;
+  padding: 0 15px;
+}
+
+.wrapper-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  float: left;
+}
+
+.entry-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
 }
