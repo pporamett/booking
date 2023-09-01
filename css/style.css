@@ -1,3 +1,90 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --primary: #f6c953;
+  --space: 30px;
+  --s-space: 15px;
+  --xs-space: 10px;
+  --border-radius: 50px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+@media (min-width:768px) {
+  .container {
+    max-width: 720px
+  }
+}
+
+@media (min-width:992px) {
+  .container {
+    max-width: 960px
+  }
+}
+
+@media (min-width:1200px) { 
+  .container {
+    width: 1000px
+  }
+}
+
+.navbar {
+  background-color: #000;
+  right: 0;
+  left: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1020
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px
+}
+
+.left {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  float: left
+}
+
+.center {
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  min-width: 0px;
+  font-size: 17px;
+  font-weight: bold
+}
+
+.right {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  float: left
+}
+
+.wrapper {
+  display: inline-block;
+  max-width: calc(100% - (60px * 2));
+  line-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 button {
   display: block;
   width: 100%;
