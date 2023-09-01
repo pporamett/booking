@@ -556,7 +556,7 @@ a>code {
 
 .left {
   position: absolute;
-  width: 90%;
+  width: 70%;
   min-width: 0px;
   font-size: 17px;
   font-weight: bold;
@@ -566,7 +566,7 @@ a>code {
 .right {
   position: relative;
   z-index: 1;
-  width: 10%;
+  width: 25%;
   float: right
 }
 
@@ -603,7 +603,7 @@ p {
 #pictureUrl {
   display: block;
   margin: 0 auto;
-  width: 12%;
+  width: 30px;
   display: -moz-box;
   display: -webkit-box;
   display: box;
