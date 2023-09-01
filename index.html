@@ -29,12 +29,12 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="liff/path/?param=9">Link to Path</a></p>
 
-  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+  <button id="btnMsg" onclick="sendMsg()">ส่งข้อความ</button>
+  <button id="btnShare" onclick="shareMsg()">แชร์ให้เพื่อน</button>
   <button onclick="openWindow()">Open Window</button>
-  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <button id="btnClose" onclick="closed()">Close</button>
+  <button id="btnScanCode" onclick="scanCode()">สแกน QR CODE</button>
+  <button id="btnLogOut" onclick="logOut()">ออกจาระบบ</button>
+  <button id="btnClose" onclick="closed()">ปิดหน้าต่าง</button>
 
   <!-- <script src="js/vconsole.min.js"></script> -->
   <!-- <script>
@@ -79,6 +79,11 @@
     }
 
     async function getUserProfile() {
+      const profile = await liff.getProfile()
+      document.getElementById("pictureUrl").src = profile.pictureUrl
+      document.getElementById("userId").append(profile.userId)
+      document.getElementById("statusMessage").append(profile.statusMessage)
+      document.getElementById("displayName").append(profile.displayName)
     }
 
     function getEnvironment() {
