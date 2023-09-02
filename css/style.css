@@ -698,7 +698,7 @@ p {
 
 .form-booking input {
   display: block;
-  width: 320px;
+  width: 100%;
   height: auto;
   padding: 0.35rem 0.75rem;
   font-size: 1rem;
@@ -707,6 +707,7 @@ p {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box  ;
+  box-sizing: border-box;
   border: 1px solid #ced4da;
   border-radius: 50px;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
