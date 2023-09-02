@@ -11,7 +11,8 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
 }
 
 html {
@@ -39,7 +40,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #f5f5f5
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -510,35 +511,21 @@ a>code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto
-}
-
-@media (min-width:768px) {
-  .container {
-    max-width: 720px
-  }
-}
-
-@media (min-width:992px) {
-  .container {
-    max-width: 960px
-  }
-}
-
-@media (min-width:1200px) { 
-  .container {
-    width: 1000px
-  }
+  max-width: 640px;
+  background-color: #fff;
+  padding: 0;
+  margin: auto
 }
 
 #header {
   padding: 0;
-  margin: 0;
-  min-width: 100%;
+  margin: 0
 }
+
+#content {
+  padding: 30px 0;
+}
+
 .navbar {
   background-color: #000;
   width: 100%;
@@ -625,9 +612,7 @@ p {
   overflow: auto
 }
 
-#content {
-  margin: 30px 0;
-}
+
 
 .welcome {
   background-color: #000;
@@ -694,8 +679,7 @@ p {
 }
 
 .form-booking {
-  padding: 0 1em;
-  margin:2.5rem 0
+  padding: 0 15px
 }
 
 .form-booking input {
@@ -791,4 +775,17 @@ select {
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid black;
   top:55%;
+}
+
+.btn-group {
+  padding: 0 15px
+}
+
+.top-banner-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+  object-fit: cover; 
 }
