@@ -556,7 +556,7 @@ a>code {
 
 .left {
   position: absolute;
-  width: 90px;
+  width: 70%;
   min-width: 0px;
   font-size: 17px;
   font-weight: bold;
@@ -566,7 +566,7 @@ a>code {
 .right {
   position: relative;
   z-index: 1;
-  width: 25%;
+  width: 80px;
   float: right
 }
 
@@ -617,6 +617,7 @@ p {
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
+  float: right;
 }
 
 #accessToken, #utouId {
