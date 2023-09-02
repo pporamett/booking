@@ -556,7 +556,7 @@ a>code {
 
 .left {
   position: absolute;
-  width: 70%;
+  width: 90px;
   min-width: 0px;
   font-size: 17px;
   font-weight: bold;
@@ -698,7 +698,7 @@ p {
 
 .form-booking input {
   display: block;
-  width: 100%;
+  width: 320px;
   height: auto;
   padding: 0.35rem 0.75rem;
   font-size: 1rem;
