@@ -738,7 +738,8 @@ select {
 }
 
 .select-type {
-    position: relative
+    position: relative;
+    width: 100%;
 }
 
 .select-type::before,
