@@ -523,7 +523,8 @@ a>code {
 }
 
 #content {
-    padding: 30px 0;
+    padding: 0;
+    margin: 0
 }
 
 .navbar {
@@ -715,16 +716,10 @@ p {
     flex-wrap: wrap
 }
 
-.col-30 {
-    -ms-flex: 30%;
-    flex: 30%;
-    max-width: 30%
-}
-
-.col-70 {
-    -ms-flex: 70%;
-    flex: 70%;
-    max-width: 70%
+.w-100 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%
 }
 
 .col-form-label {

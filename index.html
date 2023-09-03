@@ -74,43 +74,87 @@
         </div>
         <form class="form-booking" action="">
           <div class="form-group row">
-            <label for="datepicker" class="col-30 col-form-label">วันที่</label>
-            <div class="col-70">
+            <label for="datepicker" class="w-100 col-form-label">วันที่</label>
+            <div class="w-100">
               <input type="date" id="datepicker" name="datepicker" required="">
             </div>
           </div>
           <div class="form-group row">
-            <label for="timepicker" class="col-30 col-form-label">เวลา</label>
-            <div class="col-70">
-              <input type="time" id="timepicker" name="timepicker" required="">
+            <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
+            <div class="w-100">
+              <input type="text" id="licensePlateAlphabet" name="licensePlateAlphabet" placeholder="ระบุหมวด" style="margin-bottom: 1rem;">
+              <input type="text" id="licensePlate" name="licensePlate" placeholder="ระบุเลขทะเบียน">
             </div>
-          </div><div class="form-group row">
-            <label for="cardID" class="col-30 col-form-label">สำเนาบัตรประชาชน</label>
-            <div class="col-70">
+          </div>
+          <div class="form-group row">
+            <label for="brand" class="w-100 col-form-label">ยี่ห้อรถ</label>
+            <div class="w-100">
+              <div class="select-type">
+                <select name="brand" id="brand">
+                  <option value="" disabled="" selected="">ยี่ห้อรถ</option>
+                  <option value="toyota">Toyota</option>
+                  <option value="honda">Honda</option>
+                  <option value="bmw">BMW</option>
+                  <option value="izusu">Izusu</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="model" class="w-100 col-form-label">รุ่นรถ</label>
+            <div class="w-100">
+              <div class="select-type">
+                <select name="model" id="model">
+                  <option value="" disabled="" selected="">รุ่นรถ</option>
+                  <option value="yaris">Yaris</option>
+                  <option value="camry">Camry</option>
+                  <option value="corollaCross">Corolla Cross</option>
+                  <option value="hiluzRevo">Hiluz Revo</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="year" class="w-100 col-form-label">ปีรถ</label>
+            <div class="w-100">
+              <div class="select-type">
+                <select name="year" id="year">
+                  <option value="" disabled="" selected="">ปีรถ</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="cardID" class="w-100 col-form-label">สำเนาบัตรประชาชน</label>
+            <div class="w-100">
               <input type="file" id="cardID" name="cardID" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
           </div>
           <div class="form-group row">
-            <label for="drivingLicense" class="col-30 col-form-label">สำเนาใบขับขี่</label>
-            <div class="col-70">
+            <label for="drivingLicense" class="w-100 col-form-label">สำเนาใบขับขี่</label>
+            <div class="w-100">
               <input type="file" id="drivingLicense" name="drivingLicense" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
           </div>
           <div class="form-group row">
-            <label for="carRegistration" class="col-30 col-form-label">สำเนาทะเบียนรถ</label>
-            <div class="col-70">
+            <label for="carRegistration" class="w-100 col-form-label">สำเนาทะเบียนรถ</label>
+            <div class="w-100">
               <input type="file" id="carRegistration" name="carRegistration" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
           </div>
           <div class="form-group row">
-            <label for="policySchedule" class="col-30 col-form-label">ตารางกรมธรรม์</label>
-            <div class="col-70">
+            <label for="policySchedule" class="w-100 col-form-label">ตารางกรมธรรม์</label>
+            <div class="w-100">
               <input type="file" id="policySchedule" name="policySchedule" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
           </div>
           <div class="form-group row">
-            <label for="eClaim" class="col-30 col-form-label">ใบเคลม / E-Claim</label>
-            <div class="col-70">
+            <label for="eClaim" class="w-100 col-form-label">ใบเคลม / E-Claim</label>
+            <div class="w-100">
               <input type="file" id="eClaim" name="eClaim" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
           </div>
