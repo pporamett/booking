@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
@@ -8,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="container">
     <div id="header">
@@ -21,8 +24,14 @@
         <div class="right">
           <button id="btnLogOut" onclick="logOut()">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-              <style>svg{fill:#ffffff;font-size: 20px}</style>
-              <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/>
+              <style>
+                svg {
+                  fill: #ffffff;
+                  font-size: 20px
+                }
+              </style>
+              <path
+                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
             </svg>
           </button>
           <img width="30" height="30" class="img-fluid" id="pictureUrl">
@@ -30,65 +39,63 @@
       </div>
       <div class="welcome">
         <div class="wrapper-left">
-          <div class="entry-title">ยินดีต้อนรับ, <div id="displayName">คุณ </div></div>
+          <div class="entry-title">ยินดีต้อนรับ, <div id="displayName">คุณ </div>
+          </div>
         </div>
       </div>
       <div id="topBanner" class="slideHome">
         <div>
-          <img width="640" height="300" class="top-banner-image" src="https://vos.line-scdn.net/ect-mall/upload/d393ec7d-f4ba-46f7-8127-d1815b670da4.png" alt="Banner">
+          <img width="640" height="300" class="top-banner-image"
+            src="https://vos.line-scdn.net/ect-mall/upload/d393ec7d-f4ba-46f7-8127-d1815b670da4.png" alt="Banner">
         </div>
       </div>
-   </div>
-   <div id="content" class="site-content">
-    <div id="primary" class="content-area">
-      <main id="main" class="site-main">
-        <div class="service">
-          <div class="shortcut">
-            <div class="grid">
-              <div class="shortcut-image">
-                <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png" 
-                  srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
-                  loading="lazy" class="img-fluid" alt="จองคิวซ่อมรถยนต์" title="จองคิวซ่อมรถยนต์">
-                <div class="entry-name">จองคิวซ่อม</div>
-              </div>
-              <div class="shortcut-image">
-                <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png" 
-                  srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
-                  loading="lazy" class="img-fluid" alt="ตารางซ่อมรถยนต์" title="ตารางซ่อมรถยนต์">
-                <div class="entry-name">ตาราง</div>
-              </div>
-              <div class="shortcut-image">
-                <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png" 
-                  srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
-                  loading="lazy" class="img-fluid" alt="คิวซ่อมรถยนต์" title="คิวคิวซ่อมรถยนต์ซ่อม">
-                <div class="entry-name">คิวซ่อม</div>
-              </div>
-              <div class="shortcut-image">
-                <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png" 
-                  srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
-                  loading="lazy" class="img-fluid" alt="ประเมินราคาซ่อมรถยนต์" title="ประเมินราคาซ่อมรถยนต์">
-                <div class="entry-name">ประเมินราคา</div>
+    </div>
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <div class="service">
+            <div class="shortcut">
+              <div class="grid">
+                <div class="shortcut-image">
+                  <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png"
+                    srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
+                    loading="lazy" class="img-fluid" alt="จองคิวซ่อมรถยนต์" title="จองคิวซ่อมรถยนต์">
+                  <div class="entry-name">จองคิวซ่อม</div>
+                </div>
+                <div class="shortcut-image">
+                  <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png"
+                    srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
+                    loading="lazy" class="img-fluid" alt="ตารางซ่อมรถยนต์" title="ตารางซ่อมรถยนต์">
+                  <div class="entry-name">ตาราง</div>
+                </div>
+                <div class="shortcut-image">
+                  <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png"
+                    srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
+                    loading="lazy" class="img-fluid" alt="คิวซ่อมรถยนต์" title="คิวคิวซ่อมรถยนต์ซ่อม">
+                  <div class="entry-name">คิวซ่อม</div>
+                </div>
+                <div class="shortcut-image">
+                  <img src="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png"
+                    srcset="https://vos.line-scdn.net/ect-mall/upload/c945eeb7-3dc1-4e68-9ec3-cbdd084a98a5.png, https://vos.line-scdn.net/ect-mall/upload/3d7796bf-bdbc-44c5-b076-91fffcedcf5b.png 2x"
+                    loading="lazy" class="img-fluid" alt="ประเมินราคาซ่อมรถยนต์" title="ประเมินราคาซ่อมรถยนต์">
+                  <div class="entry-name">ประเมินราคา</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <form class="form-booking" action="">
-          <div class="form-group row">
-            <label for="datepicker" class="w-100 col-form-label">วันที่</label>
-            <div class="w-100">
+          <form class="form-booking" action="https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec" name="google-form">
+            <div class="form-group row">
+              <label for="datepicker" class="w-100 col-form-label">วันที่</label>
               <input type="date" id="datepicker" name="datepicker" required="">
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
-            <div class="w-100">
-              <input type="text" id="licensePlateAlphabet" name="licensePlateAlphabet" placeholder="ระบุหมวด" style="margin-bottom: 1rem;">
+            <div class="form-group row">
+              <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
+              <input type="text" id="licensePlateAlphabet" name="licensePlateAlphabet" placeholder="ระบุหมวด"
+                style="margin-bottom: 1rem;">
               <input type="text" id="licensePlate" name="licensePlate" placeholder="ระบุเลขทะเบียน">
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="brand" class="w-100 col-form-label">ยี่ห้อรถ</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="brand" class="w-100 col-form-label">ยี่ห้อรถ</label>
               <div class="select-type">
                 <select name="brand" id="brand">
                   <option value="" disabled="" selected="">ยี่ห้อรถ</option>
@@ -99,10 +106,8 @@
                 </select>
               </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="model" class="w-100 col-form-label">รุ่นรถ</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="model" class="w-100 col-form-label">รุ่นรถ</label>
               <div class="select-type">
                 <select name="model" id="model">
                   <option value="" disabled="" selected="">รุ่นรถ</option>
@@ -113,10 +118,8 @@
                 </select>
               </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="year" class="w-100 col-form-label">ปีรถ</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="year" class="w-100 col-form-label">ปีรถ</label>
               <div class="select-type">
                 <select name="year" id="year">
                   <option value="" disabled="" selected="">ปีรถ</option>
@@ -127,163 +130,154 @@
                 </select>
               </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="cardID" class="w-100 col-form-label">สำเนาบัตรประชาชน</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="cardID" class="w-100 col-form-label">สำเนาบัตรประชาชน</label>
               <input type="file" id="cardID" name="cardID" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="drivingLicense" class="w-100 col-form-label">สำเนาใบขับขี่</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="drivingLicense" class="w-100 col-form-label">สำเนาใบขับขี่</label>
               <input type="file" id="drivingLicense" name="drivingLicense" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="carRegistration" class="w-100 col-form-label">สำเนาทะเบียนรถ</label>
-            <div class="w-100">
-              <input type="file" id="carRegistration" name="carRegistration" accept=".jpg, .jpeg, .png, .pdf" required="">
+            <div class="form-group row">
+              <label for="carRegistration" class="w-100 col-form-label">สำเนาทะเบียนรถ</label>
+              <input type="file" id="carRegistration" name="carRegistration" accept=".jpg, .jpeg, .png, .pdf"
+                required="">
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="policySchedule" class="w-100 col-form-label">ตารางกรมธรรม์</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="policySchedule" class="w-100 col-form-label">ตารางกรมธรรม์</label>
               <input type="file" id="policySchedule" name="policySchedule" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="eClaim" class="w-100 col-form-label">ใบเคลม / E-Claim</label>
-            <div class="w-100">
+            <div class="form-group row">
+              <label for="eClaim" class="w-100 col-form-label">ใบเคลม / E-Claim</label>
               <input type="file" id="eClaim" name="eClaim" accept=".jpg, .jpeg, .png, .pdf" required="">
             </div>
+            <button id="submit" type="submit" value="submit" style="margin: 40px auto;">จองคิวซ่อม</button>
+          </form>
+          <div style="width:100%">
+            <p id="os"><b>OS:</b> </p>
+            <p id="language"><b>Language:</b> </p>
+            <p id="isInClient"><b>isInClient:</b> </p>
+            <p id="accessToken"><b>AccessToken:</b> </p>
+            <p id="userId"><b>userId:</b> </p>
+            <p id="decodedIDToken"><b>email:</b> </p>
+            <p id="type"><b>type:</b> </p>
+            <p id="viewType"><b>viewType:</b> </p>
+            <p id="friendship"><b>isFriendship:</b> </p>
+            <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
           </div>
-          <button id="btnSubmit" type="submit" style="margin: 40px auto;">จองคิวซ่อม</button>
-        </form>
-        <div style="width:100%">
-          <p id="os"><b>OS:</b> </p>
-          <p id="language"><b>Language:</b> </p>
-          <p id="version"><b>Version:</b> </p>
-          <p id="isInClient"><b>isInClient:</b> </p>
-          <p id="accessToken"><b>AccessToken:</b> </p>
-          <p id="userId"><b>userId:</b> </p>
-          <p id="decodedIDToken"><b>email:</b> </p>
-          <p id="type"><b>type:</b> </p>
-          <p id="viewType"><b>viewType:</b> </p>
-          <p id="friendship"><b>isFriendship:</b> </p>
-          <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
-        </div>
-      </main>      
-    </div>  
-    <div class="btn-group">
-      <button id="btnMsg" onclick="sendMsg()">ส่งข้อความ</button>
-      <button id="btnShare" onclick="shareMsg()">แชร์ให้เพื่อน</button>
-      <button onclick="openWindow()">ไปยังเว็บไซต์</button>
-      <button id="btnScanCode" onclick="scanCode()">สแกน QR CODE</button>
-      <button id="btnLogOut" onclick="logOut()">ออกจากระบบ</button>
-      <button id="btnClose" onclick="closed()">ปิดหน้าต่าง</button>
-     </div>
- </div>
+        </main>
+      </div>
+      <div class="btn-group">
+        <button id="btnMsg" onclick="sendMsg()">ส่งข้อความ</button>
+        <button id="btnShare" onclick="shareMsg()">แชร์ให้เพื่อน</button>
+        <button onclick="openWindow()">ไปยังเว็บไซต์</button>
+        <button id="btnScanCode" onclick="scanCode()">สแกน QR CODE</button>
+        <button id="btnClose" onclick="closed()">ปิดหน้าต่าง</button>
+      </div>
+    </div>
 
- 
- 
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
-  <!-- <script>
+
+
+    <!-- <script src="js/vconsole.min.js"></script> -->
+    <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
   </script> -->
 
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
-    function createUniversalLink() {
-    }
-
-    async function shareMsg() {
-      await liff.shareTargetPicker([
-      {
-        "type": "text",
-        "text": "line://app/2000600918-lyZRD6AK"
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+      function createUniversalLink() {
       }
-     ])
-    }
 
-    function logOut() {
-      liff.logout()
-      window.location.reload()
-    }
-
-    function closed() {
-      liff.closeWindow()
-    }
-
-    function openWindow() {
-      liff.openWindow({
-        url: "https://line.me",
-        external: true
-      })
-    }
-
-    async function getFriendship() {
-    }
-
-    async function sendMsg() {
-      if (liff.getContext().type !== "none") {
-        await liff.sendMessages([
-        {
-          "type": "sticker",
-          "stickerId": 1,
-          "packageId": 1
-        }
+      async function shareMsg() {
+        await liff.shareTargetPicker([
+          {
+            "type": "text",
+            "text": "line://app/2000600918-lyZRD6AK"
+          }
         ])
-        alert("ส่งข้อความแล้ว")
       }
-    }
 
-    function getContext() {
-      document.getElementById("type").append(liff.getContext().type)
-      document.getElementById("viewType").append(liff.getContext().viewType)
-    }
-
-    async function getUserProfile() {
-      const profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-    }
-
-    function getEnvironment() {
-      document.getElementById("os").append(liff.getOS())
-      document.getElementById("language").append(liff.getLanguage())
-      document.getElementById("version").append(liff.getVersion())
-      document.getElementById("accessToken").append(liff.getAccessToken())
-      document.getElementById("isInClient").append(liff.isInClient())
-      if (liff.isInClient()) {
-        document.getElementById("btnLogOut").style.display = "none"
-      } else {
-        document.getElementById("btnMsg").style.display = "none"
-        document.getElementById("btnScanCode").style.display = "none"
-        document.getElementById("btnClose").style.display = "none"
+      function logOut() {
+        liff.logout()
+        window.location.reload()
       }
-    }
 
-    async function main() {
-      liff.ready.then(() => {
-        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-        if (liff.isLoggedIn()) {
-          getEnvironment()
-          getUserProfile()
-          getContext()
-          // getFriendship()
-          // createUniversalLink()
-        } else {
-          liff.login()
+      function closed() {
+        liff.closeWindow()
+      }
+
+      function openWindow() {
+        liff.openWindow({
+          url: "https://line.me",
+          external: true
+        })
+      }
+
+      async function getFriendship() {
+      }
+
+      async function sendMsg() {
+        if (liff.getContext().type !== "none") {
+          await liff.sendMessages([
+            {
+              "type": "sticker",
+              "stickerId": 1,
+              "packageId": 1
+            }
+          ])
+          alert("ส่งข้อความแล้ว")
         }
-      })
-      await liff.init({ liffId: "2000600918-lyZRD6AK" })
-    }    
-    main()
-  </script>
+      }
+
+      function getContext() {
+        document.getElementById("type").append(liff.getContext().type)
+        document.getElementById("viewType").append(liff.getContext().viewType)
+      }
+
+      async function getUserProfile() {
+        const profile = await liff.getProfile()
+        document.getElementById("pictureUrl").src = profile.pictureUrl
+        document.getElementById("userId").append(profile.userId)
+        document.getElementById("displayName").append(profile.displayName)
+        document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+      }
+
+      function getEnvironment() {
+        document.getElementById("os").append(liff.getOS())
+        document.getElementById("language").append(liff.getLanguage())
+        document.getElementById("version").append(liff.getVersion())
+        document.getElementById("accessToken").append(liff.getAccessToken())
+        document.getElementById("isInClient").append(liff.isInClient())
+        if (liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "none"
+        } else {
+          document.getElementById("btnMsg").style.display = "none"
+          document.getElementById("btnScanCode").style.display = "none"
+          document.getElementById("btnClose").style.display = "none"
+        }
+      }
+
+      async function main() {
+        liff.ready.then(() => {
+          document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+          if (liff.isLoggedIn()) {
+            getEnvironment()
+            getUserProfile()
+            getContext()
+            // getFriendship()
+            // createUniversalLink()
+          } else {
+            liff.login()
+          }
+        })
+        await liff.init({ liffId: "2000600918-lyZRD6AK" })
+      }
+      main()
+    </script>
+    <script>
+    </script>
 </body>
+
 </html>
