@@ -275,6 +275,19 @@
       }
       main()
     </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec'
+
+      const form = document.forms['google-form']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("ของคุณครับ! คุณทำการจองคิวเรียบร้อย" ))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('โปรดกรอกแบบฟอร์มใหม่อีกครั้ง!', error.message))
+      })
+    </script>
 </body>
 
 </html>
