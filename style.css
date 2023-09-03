@@ -138,13 +138,13 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: #000;
     text-decoration: none;
     background-color: transparent
 }
 
 a:hover {
-    color: #0056b3;
+    color: #000;
     text-decoration: underline
 }
 
@@ -206,7 +206,7 @@ th {
 
 label {
     display: inline-block;
-    margin-bottom: .5rem
+    padding-left: 0.3rem
 }
 
 button {
@@ -681,10 +681,10 @@ p {
 }
 
 .form-booking {
-    padding: 30px 15px
+    padding: 0 15px
 }
 
-.form-booking input {
+input {
     display: block;
     width: 100%;
     height: auto;
@@ -703,6 +703,66 @@ p {
     -moz-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+input[type="file"] {
+    font-size: 0.85rem;
+}
+
+input[type="file"]::file-selector-button {
+    color: #000!important;
+    font-size:14px;
+    border: 1px solid grey;
+    border-radius: 50px;
+}
+
+select {
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: .35rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.select-type {
+    position: relative;
+    width: 100%;
+}
+
+.select-type::before,
+.select-type::after {
+    --size: 0.3rem;
+    content: "";
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+}
+
+.select-type::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid black;
+    top: 40%;
+}
+
+.select-type::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 55%;
 }
 
 .form-group {
@@ -730,49 +790,6 @@ p {
     line-height: 1.5;
 }
 
-select {
-    appearance: none;
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: .35rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 50px;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.select-type {
-    position: relative
-}
-
-.select-type::before,
-.select-type::after {
-    --size: 0.3rem;
-    content: "";
-    position: absolute;
-    right: 1rem;
-    pointer-events: none;
-}
-
-.select-type::before {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-bottom: var(--size) solid black;
-    top: 40%;
-}
-
-.select-type::after {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid black;
-    top: 55%;
-}
 
 .btn-group {
     padding: 0 15px
