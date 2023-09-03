@@ -714,7 +714,7 @@ input[type="file"] {
 }
 
 input[type="file"]::file-selector-button {
-    color: #000;
+    color: #000!important;
     font-size:14px;
     border: 1px solid grey;
     border-radius: 50px;
