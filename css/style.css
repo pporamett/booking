@@ -706,12 +706,10 @@ p {
 }
 
 .form-booking input::file-selector-button {
-    font-weight: bold;
-    color: dodgerblue;
-    padding: 0.5em;
-    border: thin solid grey;
-    border-radius: 3px;
-  }
+    font-size:14px;
+    border: 1px solid grey;
+    border-radius: 50px;
+}
 
 .form-group {
     margin-bottom: 1rem
