@@ -684,7 +684,7 @@ p {
     padding: 0 15px
 }
 
-.form-booking input {
+input {
     display: block;
     width: 100%;
     height: auto;
@@ -705,7 +705,11 @@ p {
     -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.form-booking input::file-selector-button {
+input[type="file"] {
+    font-size: 0.85rem;
+}
+
+input[type="file"]::file-selector-button {
     font-size:14px;
     border: 1px solid grey;
     border-radius: 50px;
