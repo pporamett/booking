@@ -132,24 +132,23 @@
             </div>
             <div class="form-group row">
               <label for="cardID" class="w-100 col-form-label">สำเนาบัตรประชาชน</label>
-              <input type="file" id="cardID" name="cardID" accept=".jpg, .jpeg, .png, .pdf" required="">
+              <input type="file" id="cardID" name="cardID" accept=".jpg, .jpeg, .png, .pdf">
             </div>
             <div class="form-group row">
               <label for="drivingLicense" class="w-100 col-form-label">สำเนาใบขับขี่</label>
-              <input type="file" id="drivingLicense" name="drivingLicense" accept=".jpg, .jpeg, .png, .pdf" required="">
+              <input type="file" id="drivingLicense" name="drivingLicense" accept=".jpg, .jpeg, .png, .pdf">
             </div>
             <div class="form-group row">
               <label for="carRegistration" class="w-100 col-form-label">สำเนาทะเบียนรถ</label>
-              <input type="file" id="carRegistration" name="carRegistration" accept=".jpg, .jpeg, .png, .pdf"
-                required="">
+              <input type="file" id="carRegistration" name="carRegistration" accept=".jpg, .jpeg, .png, .pdf">
             </div>
             <div class="form-group row">
               <label for="policySchedule" class="w-100 col-form-label">ตารางกรมธรรม์</label>
-              <input type="file" id="policySchedule" name="policySchedule" accept=".jpg, .jpeg, .png, .pdf" required="">
+              <input type="file" id="policySchedule" name="policySchedule" accept=".jpg, .jpeg, .png, .pdf">
             </div>
             <div class="form-group row">
               <label for="eClaim" class="w-100 col-form-label">ใบเคลม / E-Claim</label>
-              <input type="file" id="eClaim" name="eClaim" accept=".jpg, .jpeg, .png, .pdf" required="">
+              <input type="file" id="eClaim" name="eClaim" accept=".jpg, .jpeg, .png, .pdf">
             </div>
             <button id="submit" type="submit" value="submit" style="margin: 40px auto;">จองคิวซ่อม</button>
           </form>
@@ -274,18 +273,6 @@
         await liff.init({ liffId: "2000600918-lyZRD6AK" })
       }
       main()
-    </script>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec'
-      const form = document.forms['contact-form']
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thank you! your form is submitted successfully." ))
-        .then(() => { window.location.reload(); })
-        .catch(error => console.error('Error!', error.message))
-      })
     </script>
 </body>
 
