@@ -681,7 +681,7 @@ p {
 }
 
 .form-booking {
-    padding: 30px 15px
+    padding: 0 15px
 }
 
 .form-booking input {
@@ -704,6 +704,14 @@ p {
     -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
+.form-booking input::file-selector-button {
+    font-weight: bold;
+    color: dodgerblue;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+  }
 
 .form-group {
     margin-bottom: 1rem
