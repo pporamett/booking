@@ -169,7 +169,8 @@
       </div>
       <div class="btn-group">
         <button id="btnMsg" onclick="sendMsg()">ส่งข้อความ</button>
-        <button id="btnShare" onclick="shareMsg()">แชร์ให้เพื่อน</button>
+        <button id="btnShare1" onclick="shareMsg(true)">แชร์ให้เพื่อน 5 คน</button>
+        <button id="btnShare2" onclick="shareMsg(false)">แชร์ให้เพื่อน 1 คน</button>
         <button onclick="openWindow()">ไปยังเว็บไซต์</button>
         <button id="btnScanCode" onclick="scanCode()">สแกน QR CODE</button>
         <button id="btnClose" onclick="closed()">ปิดหน้าต่าง</button>
@@ -190,13 +191,16 @@
       function createUniversalLink() {
       }
 
-      async function shareMsg() {
-        await liff.shareTargetPicker([
-          {
+      async function shareMsg(isMulti) {
+        const result = await liff.shareTargetPicker(
+          [{
             "type": "text",
             "text": "line://app/2000600918-lyZRD6AK"
+          }],
+          {
+            isMultiple: isMulti
           }
-        ])
+        )
       }
 
       function logOut() {
@@ -272,6 +276,9 @@
           }
         })
         await liff.init({ liffId: "2000600918-lyZRD6AK", withLoginOnExternalBrowser: true })
+        if (liff.isLoggedIn()) {
+          getUserProfile()
+        }
       }
       main()
     </script>
