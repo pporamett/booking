@@ -87,7 +87,7 @@
           <form class="form-booking" name="google-form" action="https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec" method="post">
             <div class="form-group row">
               <label for="datepicker" class="w-100 col-form-label">วันที่</label>
-              <input type="date" id="datepicker" name="datepicker" required="">
+              <input id="datepicker" name="datepicker" placeholder="เลือกวันที่" autocomplete="off">
             </div>
             <div class="form-group row">
               <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
@@ -153,47 +153,6 @@
             </div>
             <button id="submit" type="submit" value="submit" style="margin: 40px auto;">จองคิวซ่อม</button>
           </form>
-          <span style="margin: 0 30px;"></span>
-          <div class="ui container">
-            <div class="ui menu">
-              <div class="header item">Brand</div>
-              <a class="active item">Link</a>
-              <a class="item">Link</a>
-              <div class="ui dropdown item">
-                Dropdown
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                  <div class="item">Action</div>
-                  <div class="item">Another Action</div>
-                  <div class="item">Something else here</div>
-                  <div class="divider"></div>
-                  <div class="item">Separated Link</div>
-                  <div class="divider"></div>
-                  <div class="item">One more separated link</div>
-                </div>
-              </div>
-              <div class="right menu">
-                <div class="item">
-                  <div class="ui action left icon input">
-                    <i class="search icon"></i>
-                    <input type="text" placeholder="Search">
-                    <button class="ui button">Submit</button>
-                  </div>
-                </div>
-                <a class="item">Link</a>
-              </div>
-            </div>
-          </div>
-          <br/>
-          <div class="ui container">
-            <div class="ui grid">
-              <div class="ui sixteen column">
-                <div id="calendar"></div>
-              </div>
-            </div>
-          </div>
-          
-          </div>
           <div style="width:100%">
             <p id="os"><b>OS:</b> </p>
             <p id="language"><b>Language:</b> </p>
