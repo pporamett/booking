@@ -87,7 +87,7 @@
           <form class="form-booking" name="google-form" action="https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec" method="post">
             <div class="form-group row">
               <label for="datepicker" class="w-100 col-form-label">วันที่</label>
-              <input id="datepicker" name="datepicker" placeholder="เลือกวันที่" autocomplete="off">
+              <input id="date-picker" name="datepicker" placeholder="เลือกวันที่" autocomplete="off">
             </div>
             <div class="form-group row">
               <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
@@ -251,7 +251,6 @@
       function getEnvironment() {
         document.getElementById("os").append(liff.getOS())
         document.getElementById("language").append(liff.getLanguage())
-        document.getElementById("version").append(liff.getVersion())
         document.getElementById("accessToken").append(liff.getAccessToken())
         document.getElementById("isInClient").append(liff.isInClient())
         if (liff.isInClient()) {
@@ -293,7 +292,12 @@
         .catch(error => console.error('โปรดกรอกแบบฟอร์มใหม่อีกครั้ง!', error.message))
       })
     </script>
-    
+    <script>
+      $('#date-picker').mobiscroll().datepicker({
+        controls: ['date'],
+        touchUi: true
+      });
+    </script>
 </body>
 
 </html>
