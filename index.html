@@ -93,7 +93,7 @@
               <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
               <input type="text" id="licensePlateAlphabet" name="licensePlateAlphabet" placeholder="ระบุหมวด"
                 style="margin-bottom: 1rem;">
-              <input type="text" id="licensePlate" name="licensePlate" placeholder="ระบุเลขทะเบียน">
+              <input type="text" id="licensePlate" name="licensePlate" pattern="[0-9]+" placeholder="ระบุเลขทะเบียน">
             </div>
             <div class="form-group row">
               <label for="brand" class="w-100 col-form-label">ยี่ห้อรถ</label>
@@ -271,7 +271,7 @@
             liff.login()
           }
         })
-        await liff.init({ liffId: "2000600918-lyZRD6AK" })
+        await liff.init({ liffId: "2000600918-lyZRD6AK", withLoginOnExternalBrowser: true })
       }
       main()
     </script>
