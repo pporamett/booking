@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai">
-  <link rel="icon" href="/images/icon.png">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -87,19 +87,7 @@
           <form class="form-booking" name="google-form" action="https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec" method="post">
             <div class="form-group row">
               <label for="datepicker" class="w-100 col-form-label">วันที่</label>
-              <div class="input-group date" id="datepicker">
-                <input type="text" class="form-control" id="date"/>
-                <span class="input-group-append">
-                  <span class="input-group-text bg-light d-block">
-                    <i class="fa fa-calendar"></i>
-                  </span>
-                </span>
-              </div>
-              <style>
-                .input-group-append {
-                  cursor: pointer;
-                }
-              </style>
+              <input type="date" id="datepicker" name="datepicker" required="">
             </div>
             <div class="form-group row">
               <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
@@ -303,6 +291,14 @@
         .then(() => { window.location.reload(); })
         .catch(error => console.error('โปรดกรอกแบบฟอร์มใหม่อีกครั้ง!', error.message))
       })
+    </script>
+    <script>
+      $.datepicker.setDefaults({
+        showOn: "both",
+        buttonImageOnly: true,
+        buttonImage: "calendar.gif",
+        buttonText: "Calendar"
+      });
     </script>
 </body>
 
