@@ -85,8 +85,8 @@
           </div>
           <form class="form-booking" name="google-form" action="https://script.google.com/macros/s/AKfycbwVosjbLsVtMQ5A-rsC2OUZ5twKVuNLbiODtBpNguP4188KRuf1TD0nZYO1iBi7vGPL0g/exec" method="post">
             <div class="form-group row">
-              <label for="datepicker" class="w-100 col-form-label">วันที่</label>
-              <input type="date" id="datepicker" name="datepicker" required="">
+              <label for="date" class="w-100 col-form-label">วันที่</label>
+              <input type="text" id="date" placeholder="DD/MM/YYYY" autocomplete="off">
             </div>
             <div class="form-group row">
               <label for="licensePlate" class="w-100 col-form-label">ทะเบียนรถ</label>
@@ -290,6 +290,28 @@
         .then(() => { window.location.reload(); })
         .catch(error => console.error('โปรดกรอกแบบฟอร์มใหม่อีกครั้ง!', error.message))
       })
+    </script>
+    <script>
+      // Function to format the date as DD/MM/YYYY
+      function formatDate(input) {
+        const value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+        if (value.length > 8) {
+          input.value = value.slice(0, 8); // Truncate input to 8 characters
+        }
+        if (value.length >= 2) {
+          const day = value.slice(0, 2);
+          const month = value.slice(2, 4);
+          const year = value.slice(4, 8);
+          input.value = `${day}/${month}/${year}`;
+        }
+      }
+    
+      const dateInput = document.getElementById("date");
+    
+      // Event listener for input field
+      dateInput.addEventListener("input", function () {
+        formatDate(this);
+      });
     </script>
 </body>
 
